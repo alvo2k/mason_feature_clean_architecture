@@ -1,23 +1,26 @@
 # Mason brick with clean architecture feature
 
-[![License: MIT][license_badge]][license_link]
-
-This brick generates the folder structure and empty classes for the new feature according to the clean architecture. Using this brick implies that you have the following folder structure in your project: ```lib/features/[feature_folder]```.
+This brick generates the folder structure and empty classes for the new feature according to the clean architecture. Using this brick implies that you have the following folder structure in your project: `lib/features/[feature_folder]`.
 
 ## Getting Started 
 
-Make sure you have Mason installed. [installation guide](https://docs.brickhub.dev/installing)
-
+0. Make sure you have Mason installed. [installation guide](https://docs.brickhub.dev/installing)
 ```sh
 dart pub global activate mason_cli
 ```
 
 > NOTE: The following commands assume that you are in the project directory (where pubspec.yaml is located)
 
+1. Initialize mason in the current directory. This will generate a mason.yaml and allow mason to work with bricks scoped locally within the workspace.
+```sh
+mason init
+```
+2. Add brick to `mason.yaml` file.
 ```sh
 mason add feature_clean_architecture --git-url https://github.com/alvo2k/mason_feature_clean_architecture
 ```
 
+3. Let him cook.
 ```sh
 mason make feature_clean_architecture
 ```
@@ -58,9 +61,6 @@ lib/features/example_brick/
 │   │   └── models.dart
 │   └── repositories
 │       └── example_brick_repository_impl.dart
-```
----
-``` 
 ├── domain
 │   ├── entities
 │   │   ├── entities.dart
@@ -71,9 +71,6 @@ lib/features/example_brick/
 │   │   ├── example_brick_usecase.dart
 │   │   └── usecases.dart
 │   └── view.dart
-```
----
-``` 
 └── presentation
     ├── bloc
     │   ├── example_brick_bloc.dart
