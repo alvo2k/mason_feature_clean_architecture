@@ -1,0 +1,7 @@
+part of '{{feature_name.snakeCase()}}_bloc.dart';
+
+sealed class {{feature_name.pascalCase()}}Event {{#use_equatable}}extends Equatable {{/use_equatable}}{}
+
+final class Load{{feature_name.pascalCase()}} extends {{feature_name.pascalCase()}}Event {
+  {{> props }}
+}

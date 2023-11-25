@@ -1,0 +1,46 @@
+name: feature_clean_architecture
+description: A brick to create a feature with a clean architecture structure with barrel files and useful packages.
+
+repository: https://github.com/alvo2k/mason_feature_clean_architecture
+
+version: 0.0.1
+
+environment:
+  mason: ">=0.1.0-dev.51 <0.1.0"
+
+vars:
+  feature_name:
+    type: string
+    default: "example brick"
+    description: "Provide the name you want for this feature. It will be used to label the folder, files, classes and widgets associated with it."
+    prompt: "Enter the name of the new feature:"
+
+  generate_barrel_files:
+    type: boolean
+    default: false
+    description: "A barrel file is a collection of export statements for ease of importing."
+    prompt: "Should barrel files be generated?"
+
+  use_equatable:
+    type: boolean
+    default: true
+    description: "Whether to use the Equatable package."
+    prompt: "Inherit bloc, models, entities from Equatable?"
+
+  use_injectable:
+    type: boolean
+    default: false
+    description: "Whether to use the Injectable package."
+    prompt: "Annotate classes using the Injectable package annotations?"
+
+  use_json_serializable:
+    type: boolean
+    default: true
+    description: "Whether to use the json_serializable package."
+    prompt: "Annotate model classes with @JsonSerializable()?"
+
+  use_bloc:
+    type: boolean
+    default: true
+    description: "Whether to use the flutter_bloc package."
+    prompt: "Should bloc/cubit files be generated?"

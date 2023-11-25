@@ -1,0 +1,15 @@
+part of '{{feature_name.snakeCase()}}_bloc.dart';
+
+abstract class {{feature_name.pascalCase()}}State {{#use_equatable}}extends Equatable {{/use_equatable}}{}
+
+class {{feature_name.pascalCase()}}Initial extends {{feature_name.pascalCase()}}State {
+  {{> props }}
+}
+
+class {{feature_name.pascalCase()}}Loading extends {{feature_name.pascalCase()}}State {
+  {{> props }}
+}
+
+class {{feature_name.pascalCase()}}Loaded extends {{feature_name.pascalCase()}}State {
+  {{> props }}
+}
