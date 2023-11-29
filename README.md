@@ -17,7 +17,7 @@ mason init
 ```
 2. Add brick to `mason.yaml` file.
 ```sh
-mason add feature_clean_architecture --git-url https://github.com/alvo2k/mason_feature_clean_architecture
+mason add feature_clean_architecture
 ```
 
 3. Let him cook.
